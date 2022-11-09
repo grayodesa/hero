@@ -3,11 +3,12 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
+{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}}
 <div class="intro intro-small">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1>{{ .Title }}</h1>
+   <!--     <h1>{{ .Title }}</h1>-->
       </div>
     </div>
   </div>
@@ -18,14 +19,14 @@
       {{ .Content }}
       <ul>
         {{ if .Site.Data.contact.phone }}
-        <li><strong>Телефон: </strong><a href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.contact.phone }}</a></li>
+        <li><a href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.contact.phone }}</a></li>
         {{ end }}
         {{ if .Site.Data.contact.email }}
-        <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
+        <li><<a href="mailto:{{ .Site.Data.contact.email }}">
             {{ .Site.Data.contact.email }}</a></li>
         {{ end }}
         {{ if .Site.Data.contact.address }}
-        <li style="white-space: pre-wrap;"><strong>Адреса: </strong>{{ .Site.Data.contact.address }}</li>
+        <li style="white-space: pre-wrap;">{{ .Site.Data.contact.address }}</li>
         {{ end }}
       </ul>
       {{ if .Site.Data.contact.hours }}
