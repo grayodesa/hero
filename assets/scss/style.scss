@@ -99,3 +99,23 @@
 .text-center p {
     font-size: 1.2rem;
 }
+.accounts-row {
+    display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+width: 100%;
+max-width: 80rem;
+margin-bottom: 7.875rem;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+justify-content: space-between;
+}
+.accounts {
+    width: 100%;
+    max-width: 25rem;
+}
+.accounts li {
+    list-style: none;
+}
