@@ -16,6 +16,12 @@
     z-index: 100;
     width: 100%;
   }
+  &.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
 }
 // .lock-scroll {
 //   .header {
