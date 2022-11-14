@@ -11,8 +11,8 @@
           </ul>
           {{ end }}
           <ul class="footer-menu">
-            <li><a href="{{ .Site.BaseURL }}">{{ T "main"}}</a></li>
-            <li><a href="{{ .Site.BaseURL }}contact">{{ T "contacts"}}</a></li>
+            <li><a href="{{ .Site.BaseURL }}{{ if eq .Site.Language.Lang "en" }}en/{{end}}">{{ T "main"}}</a></li>
+            <li><a href="{{ .Site.BaseURL }}{{ if eq .Site.Language.Lang "en" }}en/{{end}}contact">{{ T "contacts"}}</a></li>
             <li class="copyright">© {{ now.Format "2006" }} {{.Site.Title}}</li>
           </ul>
         </div>
