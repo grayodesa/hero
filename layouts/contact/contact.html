@@ -27,7 +27,12 @@
             {{ .Site.Data.contact.email }}</a></li>
         {{ end }}
         {{ if .Site.Data.contact.address }}
+        {{ if eq .Site.Language.Lang "uk" }}
         <li style="white-space: pre-wrap;">{{ .Site.Data.contact.address }}</li>
+        {{ end }}
+        {{ if eq .Site.Language.Lang "en" }}
+        <li style="white-space: pre-wrap;">Hrushevskogo St., 28/2, №43, Kyiv,  01021</li>
+        {{ end }}
         {{ end }}
       </ul>
       <h2 style="margin: 70px 0 30px 0;">{{ T "requisites" }}</h2>
